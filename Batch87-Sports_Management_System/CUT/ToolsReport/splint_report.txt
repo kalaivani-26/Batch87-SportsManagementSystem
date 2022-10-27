@@ -1,0 +1,32 @@
+func2.c: (in function Teacher)
+func2.c:46:2: Path with no return in function declared to return int
+  There is a path through a function declared to return a value on which there
+  is no return statement. This means the execution may fall through without
+  returning a meaningful result to the caller. (Use -noret to inhibit warning)
+func2.c: (in function Take_Attendance)
+func2.c:55:8: Test expression for while not boolean, type int: 1
+  Test expression type is not boolean or int. (Use -predboolint to inhibit
+  warning)
+func2.c:73:22: Variable sptid used before definition
+  An rvalue is used that may not be initialized to a value on some execution
+  path. (Use -usedef to inhibit warning)
+func2.c:72:22: Only storage ptr->next assigned to unqualified (in post loop
+                  increment): ptr = ptr->next
+  The only reference to this storage is transferred to another reference (e.g.,
+  by returning it) that does not have the only annotation. This may lead to a
+  memory leak, since the new reference is not necessarily released. (Use
+  -onlytrans to inhibit warning)
+func2.c:84:8: Test expression for while not boolean, type int: 1
+func2.c:87:20: Variable att used before definition
+func2.c:88:41: Variable sptid used before definition
+func2.c:88:16: Left operand of && is non-boolean (sd *):
+                  (ptr) && ptr->sports_id != sptid
+  The operand of a boolean operator is not a boolean. Use +ptrnegate to allow !
+  to be used on pointers. (Use -boolops to inhibit warning)
+func2.c:88:47: Only storage ptr->next assigned to unqualified (in post loop
+                  increment): ptr = ptr->next
+func2.c:99:8: Test expression for while not boolean, type int: 1
+func2.c:102:20: Variable att used before definition
+func2.c:126:9: Parse Error. (For help on parse errors, see splint -help
+                   parseerrors.)
+

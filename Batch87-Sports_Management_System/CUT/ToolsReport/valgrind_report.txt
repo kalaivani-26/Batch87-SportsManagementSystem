@@ -1,0 +1,68 @@
+
+------------------------------------------------------------------------------------------------------------------
+
+                                  ADMIN ACCESS FOR SPORTS DATABASE
+
+------------------------------------------------------------------------------------------------------------------
+
+1.Maintain Sports Database
+2.Maintain teacher database
+3.Reports
+4.Go back to main menu
+
+Enter your choice :2
+
+--------------------------------------------------------------------------------------------------------
+
+                                 MAINTAIN TEACHERS DATABASE
+
+-------------------------------------------------------------------------------------------------------
+1. Add Teacher Data
+2. Edit Teacher Data
+3. Delete Teacher Data
+4. View Teacher  Data
+5. Go to Admin Corner
+Enter choice :1
+Enter the teachers ID :1
+Enter the teacher name :Robert
+
+--------------------------------------------------------------------------------------------------------
+==549943== Syscall param write(buf) points to uninitialised byte(s)
+==549943==    at 0x49388F3: write (write.c:26)
+==549943==    by 0x48C9664: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1181)
+==549943==    by 0x48C89D5: new_do_write (fileops.c:449)
+==549943==    by 0x48CA708: _IO_new_do_write (fileops.c:426)
+==549943==    by 0x48CA708: _IO_do_write@@GLIBC_2.2.5 (fileops.c:423)
+==549943==    by 0x48C9FEF: _IO_file_close_it@@GLIBC_2.2.5 (fileops.c:136)
+==549943==    by 0x48BD375: fclose@@GLIBC_2.2.5 (iofclose.c:53)
+==549943==    by 0x10BBA7: list_to_teacher (in /home/cg87-user20/project/admin/sports)
+==549943==    by 0x10BC71: main (in /home/cg87-user20/project/admin/sports)
+==549943==  Address 0x4a24f9b is 11 bytes inside a block of size 4,096 alloc'd
+==549943==    at 0x483877F: malloc (vg_replace_malloc.c:307)
+==549943==    by 0x48BD13B: _IO_file_doallocate (filedoalloc.c:101)
+==549943==    by 0x48CBA4F: _IO_doallocbuf (genops.c:347)
+==549943==    by 0x48CBA4F: _IO_doallocbuf (genops.c:342)
+==549943==    by 0x48CABF7: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+==549943==    by 0x48C9CDD: _IO_new_file_xsputn (fileops.c:1244)
+==549943==    by 0x48C9CDD: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+==549943==    by 0x48BE5BC: fwrite (iofwrite.c:39)
+==549943==    by 0x10BB7D: list_to_teacher (in /home/cg87-user20/project/admin/sports)
+==549943==    by 0x10BC71: main (in /home/cg87-user20/project/admin/sports)
+==549943==
+==549943==
+==549943== HEAP SUMMARY:
+==549943==     in use at exit: 40 bytes in 1 blocks
+==549943==   total heap usage: 7 allocs, 6 frees, 7,600 bytes allocated
+==549943==
+==549943== LEAK SUMMARY:
+==549943==    definitely lost: 0 bytes in 0 blocks
+==549943==    indirectly lost: 0 bytes in 0 blocks
+==549943==      possibly lost: 0 bytes in 0 blocks
+==549943==    still reachable: 40 bytes in 1 blocks
+==549943==         suppressed: 0 bytes in 0 blocks
+==549943== Rerun with --leak-check=full to see details of leaked memory
+==549943==
+==549943== Use --track-origins=yes to see where uninitialised values come from
+==549943== For lists of detected and suppressed errors, rerun with: -s
+==549943== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
